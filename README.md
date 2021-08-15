@@ -44,6 +44,8 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?logo=latex&logoColor=white) 
 ![Wolfram Mathematica](https://img.shields.io/static/v1?message=Wolfram+Mathematica&color=DD1100&logo=Wolfram+Mathematica&logoColor=FFFFFF&label=)
 
+## 
+[![sleepymalc's wakatime stats](https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=graywhite)](https://github.com/anuraghazra/github-readme-stats)
 ## 📫 How to reach me:
 
 - email: bensoniscool123@gmail.com
