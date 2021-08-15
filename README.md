@@ -6,35 +6,38 @@ I am Pingbang Hu, a freelance back-end developer and currently study in Univeris
 
 ## Languages
 
-![](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)![](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)![](https://img.shields.io/badge/-Golang-00ADD8?logo=go&logoColor=white)![](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
-
-
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
+![Go](https://img.shields.io/badge/-Golang-00ADD8?logo=go&logoColor=white)
+![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)
+![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex)
 
 ## Backend Skills
 
-![](https://img.shields.io/badge/-Gin-00ADD8?link=https://github.com/gin-gonic/gin)![](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
-
-
+![Gin](https://img.shields.io/badge/-Gin-00ADD8?link=https://github.com/gin-gonic/gin)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
 
 ## Operation Skills
 
-![](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)![](https://img.shields.io/badge/-Kubernetes-326CE5?logo=Kubernetes&logoColor=white)
+![docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
+![k8s](https://img.shields.io/badge/-Kubernetes-326CE5?logo=Kubernetes&logoColor=white)
 
 ## Experienced Cloud Platform
 
-![](https://img.shields.io/badge/-Google%20Cloud-4285F4?logo=google%20cloud&logoColor=white) 
+![GCP](https://img.shields.io/badge/-Google%20Cloud-4285F4?logo=google%20cloud&logoColor=white) 
 
 ## Development Tool skills
 
-![](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)![](https://img.shields.io/badge/-Github-181717?logo=github&logoColor=white)![](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=white) 
+![git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
+![github](https://img.shields.io/badge/-Github-181717?logo=github&logoColor=white)
+![VScode](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=white) 
 
 ## Design Tool Skills
 
-![](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)![](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=adobe%20photoshop&logoColor=white)
-
-
+![](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)
+![](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=adobe%20photoshop&logoColor=white)
 
 ## Academic Tool Skills
 
