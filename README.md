@@ -42,6 +42,7 @@ I am Pingbang Hu, a freelance back-end developer and currently study in Univeris
 ## Academic Tool Skills
 
 ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?logo=latex&logoColor=white) 
+![Wolfram Mathematica](https://img.shields.io/static/v1?style=for-the-badge&message=Wolfram+Mathematica&color=DD1100&logo=Wolfram+Mathematica&logoColor=FFFFFF&label=)
 
 ## 📫 How to reach me:
 
