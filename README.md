@@ -1,6 +1,6 @@
 # Wellcome <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-SJTU Joint instuite majored in ECE & Univeristy of Michigan majored in CS.
+I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-SJTU Joint instuite majored in ECE & Univeristy of Michigan majored in CS with Math minor.
 
 ![Github stats](https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true)
 
