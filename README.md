@@ -45,7 +45,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 ## Academic Tool Skills
 
 ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?logo=latex&logoColor=white) 
-![Wolfram Mathematica](https://img.shields.io/static/v1?message=Wolfram+Mathematica&color=DD1100&logo=Wolfram+Mathematica&logoColor=FFFFFF&label=)
+![Mathematica](https://img.shields.io/static/v1?message=Mathematica&color=DD1100&logo=Wolfram+Mathematica&logoColor=FFFFFF&label=)
 ![MarkDown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white)
 
 ## 
