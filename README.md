@@ -12,7 +12,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 ![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula&layout=compact&langs_count=8)
 
 ## Backend Skills
 
