@@ -2,7 +2,7 @@
 
 I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-SJTU Joint instuite majored in ECE & Univeristy of Michigan majored in CS with Math minor.
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true)
+![Github stats](https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&theme=dracula)
 
 ## Languages
 
