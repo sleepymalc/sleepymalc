@@ -49,7 +49,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 ![MarkDown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white)
 
 ## 
-[![sleepymalc's wakatime stats](https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula)](https://github.com/anuraghazra/github-readme-stats&v=2)
+[![sleepymalc's wakatime stats](https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula)](https://github.com/anuraghazra/github-readme-stats)
 
 ## 📫 How to reach me:
 
