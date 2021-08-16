@@ -12,7 +12,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 ![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula)
 
 ## Backend Skills
 
@@ -49,7 +49,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 ![MarkDown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white)
 
 ## 
-[![sleepymalc's wakatime stats](https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=graywhite)](https://github.com/anuraghazra/github-readme-stats)
+[![sleepymalc's wakatime stats](https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=graywhite&theme=dracula)](https://github.com/anuraghazra/github-readme-stats)
 ## 📫 How to reach me:
 
 - email: bensoniscool123@gmail.com
