@@ -16,8 +16,10 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 
 ## Backend Skills
 
+![OpenGL](https://img.shields.io/badge/OpenGL-FFFFFF?logo=opengl)
 ![Gin](https://img.shields.io/badge/-Gin-00ADD8?link=https://github.com/gin-gonic/gin)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
+![PostMan](https://img.shields.io/badge/Postman-FF6C37?logo=Postman&logoColor=white)
 
 ## Operation Skills
 
@@ -32,17 +34,19 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 
 ![git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
 ![github](https://img.shields.io/badge/-Github-181717?logo=github&logoColor=white)
-![VScode](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=white) 
+![VScode](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=white)
+![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?logo=vim&logoColor=white)
 
 ## Design Tool Skills
 
-![](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)
-![](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=adobe%20photoshop&logoColor=white)
+![figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)
+![PS](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=adobe%20photoshop&logoColor=white)
 
 ## Academic Tool Skills
 
 ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?logo=latex&logoColor=white) 
 ![Wolfram Mathematica](https://img.shields.io/static/v1?message=Wolfram+Mathematica&color=DD1100&logo=Wolfram+Mathematica&logoColor=FFFFFF&label=)
+![MarkDown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white)
 
 ## 
 [![sleepymalc's wakatime stats](https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=graywhite)](https://github.com/anuraghazra/github-readme-stats)
