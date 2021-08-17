@@ -10,6 +10,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![Go](https://img.shields.io/badge/-Golang-00ADD8?logo=go&logoColor=white)
 ![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
@@ -32,6 +33,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
  4. Development Tool - ![git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
     ![github](https://img.shields.io/badge/-Github-181717?logo=github&logoColor=white)
     ![VScode](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=white)
+    ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?logo=gnu-bash&logoColor=white)
     ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?logo=vim&logoColor=white)
 
  5. Design Tool - ![figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)
