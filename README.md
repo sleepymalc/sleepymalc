@@ -4,7 +4,9 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 
 ##
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+</p>
 
 ## Languages
 
@@ -16,7 +18,10 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 
 ##
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula&layout=compact&langs_count=8)
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula&layout=compact&langs_count=8" />
+</p>
 
 ## Skills
 
@@ -46,7 +51,9 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
     ![MarkDown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white) 
 ##
 
-![sleepymalc's wakatime stats](https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula)
+<p align="center">
+  <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
+</p>
 
 ## 📫 How to reach me:
 
