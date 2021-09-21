@@ -55,6 +55,12 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
   <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
 </p>
 
+##
+
+<p align="center">
+  <img src="http://github-readme-streak-stats.herokuapp.com?user=sleepymalc&theme=dracula" />
+</p>
+
 ## 📫 How to reach me:
 
 - Email: bensoniscool123@gmail.com
