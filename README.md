@@ -37,6 +37,7 @@ I am Pingbang Hu, a freelance back-end developer. I am currently studying in UM-
  3. Experienced Cloud - ![GCP](https://img.shields.io/badge/-Google%20Cloud-4285F4?logo=google%20cloud&logoColor=white)
 
  4. Development Tool - ![git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
+    ![redmine](https://img.shields.io/badge/-Redmine-B32024?logo=Redmine&logoColor=red)
     ![github](https://img.shields.io/badge/-Github-181717?logo=github&logoColor=white)
     ![VScode](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=white)
     ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?logo=vim&logoColor=white)
