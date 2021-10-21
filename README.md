@@ -1,6 +1,15 @@
 # Wellcome <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-I am Pingbang Hu, a freelance back-end developer. I am currently studying in Univeristy of Michigan majored in CS with Math minor & UM-SJTU Joint instuite majored in ECE as a junior student. I'm passionate about development, but this is not the only thing I'm interesting in! I'm also fascinated by algorithm, pure mathamatics, hence I'm now working on a research about ***interpretable machine learning***.
+I am Pingbang Hu, a **freelance back-end developer**. I am currently studying in 
+1. Univeristy of Michigan majored in CS with Math minor 
+2. UM-SJTU Joint instuite majored in ECE 
+
+as a junior student. I'm passionate about development, but this is not the only thing I'm interesting in! I'm also fascinated by 
+- algorithm
+- pure mathamatics
+- applied mathematics
+
+hence I'm now working on a research about ***interpretable machine learning***.
 
 ##
 
