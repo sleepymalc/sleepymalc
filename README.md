@@ -1,6 +1,6 @@
 # Wellcome <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-I am Pingbang Hu, a **freelance back-end developer**. I am currently studying in 
+I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthusiast**. I am currently studying in 
 1. Univeristy of Michigan majored in CS with Math minor 
 2. UM-SJTU Joint instuite majored in ECE 
 
