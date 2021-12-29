@@ -10,7 +10,7 @@ as a junior student. I'm passionate about development, but this is not the only 
 - Applied mathematics
 - Theroetical Machine Learning
 
-From my passion, I have experience researching on ***theoretical machine learning***. I was a research assistance in ***interpretable machine learning***, and now I'm working on a research about ***machine learning with GNN*** as a research assistance.
+From my passion, I have experience researching on ***theoretical machine learning***. I was a research assistance in ***interpretable machine learning***, and now I'm working on a research about ***GNN (Graph Neural Network)*** as a research assistance.
 
 ##
 
