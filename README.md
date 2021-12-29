@@ -3,6 +3,7 @@
 I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthusiast**. I am currently studying in 
 - Univeristy of Michigan majored in CS with Math minor 
 - UM-SJTU Joint instuite majored in ECE 
+
 as a junior student. I'm passionate about development, but this is not the only thing I'm interesting in! I'm also fascinated by 
 - Algorithm
 - Pure mathamatics
