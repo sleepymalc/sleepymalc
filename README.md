@@ -15,7 +15,12 @@ From my passion, I have experience researching on ***theoretical machine learnin
 ##
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" height="175" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula&layout=compact&langs_count=8" />
+  </a>
 </p>
 
 ## Languages
@@ -27,12 +32,6 @@ From my passion, I have experience researching on ***theoretical machine learnin
 ![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?logo=gnu-bash&logoColor=white)
-
-##
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula&layout=compact&langs_count=8" />
-</p>
 
 ## Skills
 
@@ -60,12 +59,6 @@ From my passion, I have experience researching on ***theoretical machine learnin
  6. Academic Tool - ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?logo=latex&logoColor=white) 
     ![Mathematica](https://img.shields.io/static/v1?message=Mathematica&color=DD1100&logo=Wolfram+Mathematica&logoColor=FFFFFF&label=)
     ![MarkDown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white) 
-##
-
-<p align="center">
-  <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
-</p>
-
 
 ## 📫 How to reach me:
 
@@ -75,4 +68,7 @@ From my passion, I have experience researching on ***theoretical machine learnin
 
 <p align="center">
   <img src="http://github-readme-streak-stats.herokuapp.com?user=sleepymalc&theme=dracula" />
+</p>
+<p align="center">
+  <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
 </p>
