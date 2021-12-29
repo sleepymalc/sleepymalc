@@ -23,7 +23,7 @@ From my passion, I have experience researching on ***theoretical machine learnin
   </a>
 </p>
 
-## Languages
+## 💬 Languages
 
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
@@ -33,7 +33,7 @@ From my passion, I have experience researching on ***theoretical machine learnin
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?logo=gnu-bash&logoColor=white)
 
-## Skills
+## 🦾 Skills
 
  - 🔩 Backend - ![OpenGL](https://img.shields.io/badge/OpenGL-FFFFFF?logo=opengl)
     ![Gin](https://img.shields.io/badge/-Gin-00ADD8?link=https://github.com/gin-gonic/gin)
@@ -62,7 +62,7 @@ From my passion, I have experience researching on ***theoretical machine learnin
 
 ## 📫 How to reach me:
 
-- Email: pbb@umich.edu
+- ✉️ Email: pbb@umich.edu
 
 ##
 
