@@ -9,7 +9,7 @@ as a junior student. I'm passionate about development, but this is not the only 
 - pure mathamatics
 - applied mathematics
 
-From my passion, I have experience researching on I'm now working on ***interpretable machine learning***, and now I'm working on a research about ***machine learning with GNN***.
+From my passion, I have experience researching on I was a research assistance in ***interpretable machine learning***, and now I'm working on a research about ***machine learning with GNN*** as a research assistance.
 
 ##
 
