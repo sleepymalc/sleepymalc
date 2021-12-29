@@ -74,4 +74,4 @@ From my passion, I have experience researching on ***theoretical machine learnin
 
 ## 📫 How to reach me:
 
-- Email: bensoniscool123@gmail.com
+- Email: bensoniscool123@gmail.com (personal)/pbb@umich.edu (academic)
