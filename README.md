@@ -14,7 +14,7 @@ as a junior student. I'm passionate about development, but this is not the only 
 
 From my passion, I have experience researching on ***theoretical machine learning***. I was a research assistance in ***interpretable machine learning***, and now I'm working on a research about ***GNN (Graph Neural Network)*** as a research assistance.
 
-Another thing to mention is that I'm a <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> enthusiast! I use <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> a lot, and I have my own workflow working with it. Please see this (repo)[https://github.com/sleepymalc/VSCode-LaTeX-Inkscape] for detailed configuration! 
+Another thing to mention is that I'm a <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> enthusiast! I use <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> a lot, and I have my own workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration! 
 
 ##
 
