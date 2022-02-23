@@ -76,3 +76,8 @@ Another thing to mention is that I'm a <img src="https://render.githubuserconten
 <p align="center">
   <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
 </p>
+
+##
+<p align="center">
+    <img src="https://raw.githubusercontent.com/sleepymalc/sleepymalc/output/github-contribution-grid-snake.svg" />
+</p>
