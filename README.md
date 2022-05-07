@@ -1,6 +1,6 @@
 # Welcome <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthusiast** seeking for Ph.D. opportunity. I am currently studying in 
+I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthusiast**. I am currently studying in 
 - Univeristy of Michigan majored in CoE CS & LSA Math (Honor Math Program)
 - UM-SJTU Joint instuite majored in ECE 
 
@@ -11,8 +11,6 @@ as a junior student. I'm passionate about development, but this is not the only 
 - Pure mathamatics
 - Applied mathematics
 - Theroetical Machine Learning
-
-From my passion, I have experience researching on ***theoretical machine learning***. I was a research assistance in ***interpretable machine learning***, and now I'm working on a research about ***GNN (Graph Neural Network)*** as a research assistance.
 
 Another thing to mention is that I'm a <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> enthusiast! I use <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> a lot, and I have my own workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration! 
 
