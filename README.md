@@ -4,13 +4,7 @@ I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthus
 - Univeristy of Michigan majored in CoE CS & LSA Math (Honor Math Program)
 - UM-SJTU Joint instuite majored in ECE 
 
-as a junior student. I'm passionate about development, but this is not the only thing I'm interesting in! I'm also fascinated by 
-- Machine Learning Algorithm
-- (non)Convex Optimization theory
-- Geometric Programming
-- Pure mathamatics
-- Applied mathematics
-- Theroetical Machine Learning
+as a junior student. And I'm a undergraduated researcher working on GNN, DL theory and fast graph algorithm in TCS.
 
 Another thing to mention is that I'm a <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> enthusiast! I use <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> a lot, and I have my own workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration! 
 
