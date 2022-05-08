@@ -8,6 +8,8 @@ as a junior student. And I'm a undergraduated researcher working on GNN, DL theo
 
 Another thing to mention is that I'm a <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> enthusiast! I use <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> a lot, and I have my own workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration! 
 
+To learn more about me, you can find me on [linkedin](https://www.linkedin.com/in/pingbang-hu-78a190215/).
+
 ##
 
 <p align="center">
