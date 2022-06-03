@@ -1,4 +1,4 @@
-# Welcome <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="3px">
+# Welcome 
 
 I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthusiast**. I am currently studying in 
 - Univeristy of Michigan majored in CoE CS & LSA Math (Honor Math Program)
