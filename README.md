@@ -51,8 +51,9 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
     ![PyCharm](https://img.shields.io/badge/pycharm-143?logo=pycharm&logoColor=green)
     ![Xcode](https://img.shields.io/badge/Xcode-007ACC?logo=Xcode&logoColor=white)
 
- - 🎨 Design Tool - ![figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)
-    ![PS](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=adobe%20photoshop&logoColor=white)
+ - 🎨 Design Tool - ![Figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)
+    ![PhotoShop](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=adobe%20photoshop&logoColor=white)
+    ![Inkscape](https://img.shields.io/badge/Inkscape-000000?logo=Inkscape&logoColor=white)
 
  - 🖋 Academic Tool - ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?logo=latex&logoColor=white) 
     ![Mathematica](https://img.shields.io/static/v1?message=Mathematica&color=DD1100&logo=Wolfram+Mathematica&logoColor=FFFFFF&label=)
