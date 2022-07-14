@@ -10,7 +10,7 @@ Another thing to mention is that I'm a <img src="https://render.githubuserconten
 
 To learn more about me, you can find me on [linkedin](https://www.linkedin.com/in/pingbang-hu-78a190215/).
 
-##
+# 
 
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
@@ -28,6 +28,7 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![Go](https://img.shields.io/badge/-Golang-00ADD8?logo=go&logoColor=white)
 ![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)
+
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?logo=gnu-bash&logoColor=white)
 
