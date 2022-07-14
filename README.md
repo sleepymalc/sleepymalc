@@ -27,7 +27,7 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![Go](https://img.shields.io/badge/-Golang-00ADD8?logo=go&logoColor=white)
-![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)
+![Lua](https://img.shields.io/badge/Lua-2C2D72?logo=lua&logoColor=white)
 ![Elm](https://img.shields.io/badge/Elm-60B5CC?logo=elm&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?logo=gnu-bash&logoColor=white)
 
