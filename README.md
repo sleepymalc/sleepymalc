@@ -48,7 +48,7 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
     ![github](https://img.shields.io/badge/-Github-181717?logo=github&logoColor=white)
     ![VScode](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=white)
     ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?logo=vim&logoColor=white)
-    ![PyCharm](https://img.shields.io/badge/pycharm-143?logo=pycharm&logoColor=green)
+    ![Colab](https://img.shields.io/badge/Colab-F9AB00?logo=googlecolab&color=525252)
     ![Xcode](https://img.shields.io/badge/Xcode-007ACC?logo=Xcode&logoColor=white)
 
  - 🎨 Design Tool - ![Figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white)
