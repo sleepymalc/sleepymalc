@@ -26,6 +26,7 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 </p>
 
 ## 🦾 Skills
+
 <div align="center">
 | <!-- -->          | <!-- --> |
 | ----------------- | -------- |
