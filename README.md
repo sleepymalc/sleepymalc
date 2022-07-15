@@ -6,7 +6,7 @@ I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthus
 
 as a junior student. And I'm an undergraduate researcher working on GNN, DL theory and fast graph algorithm in TCS.
 
-Another thing to mention is that I'm a <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> enthusiast! I use <img src="https://render.githubusercontent.com/render/math?math=\LaTeX"> a lot, and I have my workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration! 
+Another thing to mention is that I'm a $\LaTeX$ enthusiast! I use $\LaTeX$ a lot, and I have my workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration! 
 
 To learn more about me, you can find me on [linkedin](https://www.linkedin.com/in/pingbang-hu-78a190215/).
 
