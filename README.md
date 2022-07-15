@@ -1,4 +1,4 @@
-# Welcome 
+# Welcome 👋
 
 I am Pingbang Hu, a **freelance back-end developer**, and a **theoretical enthusiast**. I am currently studying in 
 - University of Michigan majored in CoE CS & LSA Math (Honor Math Program)
@@ -11,14 +11,18 @@ Another thing to mention is that I'm a $\LaTeX$ enthusiast! I use $\LaTeX$ a lot
 To learn more about me, you can find me on [linkedin](https://www.linkedin.com/in/pingbang-hu-78a190215/).
 
 # 
-
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" height="190" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+    <img height="190" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
   </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" height="190" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sleepymalc&hide=Tex&theme=dracula&layout=compact&langs_count=8" />
+  <a href="https://github.com/anuraghazra/github-readme-streak-stats">
+    <img height="190" src="http://github-readme-streak-stats.herokuapp.com?user=sleepymalc&theme=dracula" />
   </a>
+</p>
+
+<p align="center"> 
+  <b>Visitor count</b><br>
+  <img src="https://profile-counter.glitch.me/sleepymalc/count.svg" />
 </p>
 
 ## 💬 Languages
@@ -63,16 +67,12 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 
 - ✉️ Email: pbb@umich.edu
 
-##
-
-<p align="center">
-  <img src="http://github-readme-streak-stats.herokuapp.com?user=sleepymalc&theme=dracula" />
-</p>
-<p align="center">
-  <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
-</p>
-
 ## 🐍
 <p align="center">
     <img src="https://raw.githubusercontent.com/sleepymalc/sleepymalc/output/github-contribution-grid-snake.svg" />
+</p>
+
+##
+<p align="center">
+  <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
 </p>
