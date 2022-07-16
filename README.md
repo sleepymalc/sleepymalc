@@ -12,8 +12,8 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 
 # 
 <p align="center">
-  <img width="49%" src="http://github-readme-streak-stats.herokuapp.com?user=sleepymalc&theme=dracula" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+  <img height="190" src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
+  <img height="190" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
 </p>
 
 ## 🦾 Skills
@@ -39,9 +39,4 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 
 <p align="center"> 
   <img src="https://profile-counter.glitch.me/sleepymalc/count.svg" />
-</p>
-
-##
-<p align="center">
-  <img src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&theme=dracula" />
 </p>
