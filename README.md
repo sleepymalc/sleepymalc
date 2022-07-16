@@ -4,11 +4,7 @@ I am Pingbang Hu, a **undergraduate researcher**, and a **math enthusiast**. I a
 - University of Michigan majored in CoE CS & LSA Math (Honor Math Program)
 - UM-SJTU Joint institute majored in ECE 
 
-as a junior student. I'm currently working on GNN, DL theory and fast graph algorithm in TCS.
-
-I use $\LaTeX$ a lot, and I have my workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration! 
-
-To learn more about me, you can find me on [linkedin](https://www.linkedin.com/in/pingbang-hu-78a190215/).
+as a junior student. I'm currently working on GNN, DL theory and fast graph algorithm in TCS. I use $\LaTeX$ a lot, and I have my workflow working with it. Please see this [repo](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape) for detailed configuration!  To learn more about me, you can find me on [linkedin](https://www.linkedin.com/in/pingbang-hu-78a190215/).
 
 # 
 <p align="center">
