@@ -13,10 +13,10 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 # 
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img height="50%" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+    <img width="50%" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
   </a>
   <a href="https://github.com/anuraghazra/github-readme-streak-stats">
-    <img height="50%" src="http://github-readme-streak-stats.herokuapp.com?user=sleepymalc&theme=dracula" />
+    <img width="50%" src="http://github-readme-streak-stats.herokuapp.com?user=sleepymalc&theme=dracula" />
   </a>
 </p>
 
