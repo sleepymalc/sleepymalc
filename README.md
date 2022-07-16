@@ -16,12 +16,6 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
   <img width="49%" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
 </p>
 
-
-<p align="center"> 
-  <b>Visitor count</b><br>
-  <img src="https://profile-counter.glitch.me/sleepymalc/count.svg" />
-</p>
-
 ## 🦾 Skills
 
 <div align="center">
@@ -38,13 +32,13 @@ To learn more about me, you can find me on [linkedin](https://www.linkedin.com/i
 
 </div>
 
-## 📫 How to reach me:
-
-- ✉️ Email: pbb@umich.edu
-
 ## 🐍
 <p align="center">
     <img src="https://raw.githubusercontent.com/sleepymalc/sleepymalc/output/github-contribution-grid-snake.svg" />
+</p>
+
+<p align="center"> 
+  <img src="https://profile-counter.glitch.me/sleepymalc/count.svg" />
 </p>
 
 ##
