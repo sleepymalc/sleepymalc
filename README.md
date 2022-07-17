@@ -27,7 +27,7 @@ as a junior student. I'm currently working on GNN, DL theory and fast graph algo
   </tr>
   <tr>
     <td>🔩 Backend</td>
-    <td><img src="https://img.shields.io/badge/OpenGL-FFFFFF?logo=opengl" alt="OpenGL"/> <img src="https://img.shields.io/badge/-Gin-00ADD8?link=https://github.com/gin-gonic/gin" alt="Gin"/> <img src="https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white" alt="MongoDB"/> <img src="https://img.shields.io/badge/Postman-FF6C37?logo=Postman&logoColor=white" alt="PostMan"/></td>
+    <td><img src="https://img.shields.io/badge/OpenGL-FFFFFF?logo=opengl" alt="OpenGL"/> <img src="https://custom-icon-badges.herokuapp.com/badge/-Gin-00ADD8?logo=gin&logoColor=white" alt="Gin"/> <img src="https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white" alt="MongoDB"/> <img src="https://img.shields.io/badge/Postman-FF6C37?logo=Postman&logoColor=white" alt="PostMan"/></td>
   </tr>
   <tr>
     <td>⚙️ Operation</td>
