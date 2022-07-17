@@ -6,12 +6,6 @@ I'm Pingbang Hu, an **undergraduate researcher**, and a **math enthusiast**. I'm
 
 as a junior student. I'm currently working on GNN, DL theory and fast graph algorithm in TCS. To learn more about me, you can find me on [LinkedIn](https://www.linkedin.com/in/pingbang-hu-78a190215/) or my [personal website](https://www.pbb.wtf).
 
-# 
-<p align="center">
-  <img height="163" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
-  <img height="163" src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
-</p>
-
 ## 🦾 Skills
 
 <div align="center">
@@ -45,7 +39,11 @@ as a junior student. I'm currently working on GNN, DL theory and fast graph algo
 
 </div>
 
-## 🐍
+##
+<p align="center">
+  <img height="163" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+  <img height="163" src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
+</p>
 <p align="center">
     <img src="https://raw.githubusercontent.com/sleepymalc/sleepymalc/output/github-contribution-grid-snake.svg" />
 </p>
