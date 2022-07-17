@@ -1,6 +1,6 @@
 # Welcome 👋
 
-I am Pingbang Hu, a **undergraduate researcher**, and a **math enthusiast**. I am currently studying in 
+I'm Pingbang Hu, an **undergraduate researcher**, and a **math enthusiast**. I'm currently studying in 
 - University of Michigan majored in CoE CS & LSA Math (Honor Math Program)
 - UM-SJTU Joint institute majored in ECE 
 
