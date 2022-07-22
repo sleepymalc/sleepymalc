@@ -4,7 +4,7 @@ I'm Pingbang Hu, an **undergraduate researcher**, and a **math enthusiast**. I'm
 - University of Michigan majored in CoE CS & LSA Math (Honor Math Program)
 - UM-SJTU Joint institute majored in ECE 
 
-as a junior student. I'm currently working on GNN, DL theory and fast graph algorithm in TCS. To learn more about me, you can find me on [LinkedIn](https://www.linkedin.com/in/pingbang-hu-78a190215/) or my [personal website](https://www.pbb.wtf).
+as a junior student. I'm currently working on theory of GNN and DL, and also fast graph algorithm in TCS. To learn more about me, you can find me on [LinkedIn](https://www.linkedin.com/in/pingbang-hu-78a190215/) or my [personal website](https://www.pbb.wtf).
 
 ## 🦾 Skills
 
