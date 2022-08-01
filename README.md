@@ -1,4 +1,4 @@
-# Welcome 👋
+# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> Welcome
 
 I'm Pingbang Hu, an **undergraduate researcher**, and a **math enthusiast**. I'm currently studying in 
 - University of Michigan majored in CoE CS & LSA Math (Honor Math Program)
