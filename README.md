@@ -39,8 +39,8 @@ as a junior student. I'm currently working on the theory of GNN and DL, and also
 ---
 
 <p align="center">
-  <img width="30.2%" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
-  <img width="31%" src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+  <img width="50.3%" src="https://github-readme-stats-peach-two.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
 </p>
 <p align="center">
     <img src="https://raw.githubusercontent.com/sleepymalc/sleepymalc/output/github-contribution-grid-snake.svg" />
