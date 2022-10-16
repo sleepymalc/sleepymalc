@@ -48,4 +48,4 @@ as a senior student. I'm currently working on the theory of GNN and DL, and also
 <p align="center">
   <img src="https://profile-counter.glitch.me/sleepymalc/count.svg" />
 </p>
-<p align="center"><a href="https://www.linkedin.com/in/pingbang-hu-78a190215/">LinkedIn</a> | <a href=https://www.pbb.wtf>pbb.wtf</a> </p>
+<p align="center"><a href=https://www.pbb.wtf>pbb.wtf</a> | <a href="https://scholar.google.com/citations?user=TXqLUIAAAAAJ&hl=en&oi=ao">Google Scholar</a> | <a href="https://www.linkedin.com/in/pingbang-hu-78a190215/">LinkedIn</a> </p>
