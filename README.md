@@ -2,7 +2,7 @@
 
 An **undergraduate researcher** and a **math enthusiast** study in
 
-* University of Michigan majored in CoE CS & LSA Math (Honor Math Program)
+* University of Michigan majored in CoE CS & minored in LSA Math
 * UM-SJTU Joint institute majored in ECE
 
 as a senior student. I'm currently working on the theory of GNN and DL, and also the fast graph algorithm in TCS.
