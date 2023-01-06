@@ -21,8 +21,9 @@ jobs:
     timeout-minutes: 10
     steps:
       # Generates the snake
-      - name: generate github-contribution-grid-snake.svg
-        uses: Platane/snk@master
+      - name: generate-snake-game-from-github-contribution-grid
+        uses: Platane/snk@v2.2.0
+
         id: snake-gif
         with:
           github_user_name: ${{ github.repository_owner }}
