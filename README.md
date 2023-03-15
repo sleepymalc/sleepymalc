@@ -1,6 +1,6 @@
 # <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> Welcome
 
-An **undergraduate researcher** and a **math enthusiast** study in
+An incoming Ph.D. student of Information Science at the University of Illinois Urbana-Champaign. Currently, I'm an **undergraduate researcher** study at
 
 * University of Michigan majored in CoE CS & minored in LSA Math
 * UM-SJTU Joint institute majored in ECE
