@@ -1,11 +1,11 @@
 # <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> Welcome
 
-An incoming Ph.D. student of Information Science at the University of Illinois Urbana-Champaign. Currently, I'm an **undergraduate researcher** study at
+An incoming Ph.D. student of **Information Science** at the *University of Illinois Urbana-Champaign*. Currently, I'm an **undergraduate researcher** study at
 
-* University of Michigan majored in CoE CS & minored in LSA Math
-* UM-SJTU Joint institute majored in ECE
+* *University of Michigan* majored in **CoE CS** & minored in **LSA Math**
+* *Shanghai Jiao Tong University* majored in **UM-SJTU Joint Institute ECE**
 
-as a senior student. I'm currently working on the theory of GNN and DL, and also the fast graph algorithm in TCS.
+as a senior student. I'm working on the theory of GNN and DL, and also the fast graph algorithm in TCS.
 
 ## 🦾 Skills
 
