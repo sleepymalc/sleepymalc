@@ -1,6 +1,6 @@
 # <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> Welcome
 
-A Ph.D. student of **Information Science** at the *University of Illinois Urbana-Champaign*. I obtained my dual Bachelor degree at
+A Ph.D. student in **Information Science** at *University of Illinois Urbana-Champaign*. I obtained my dual Bachelor degree at
 
 * *University of Michigan* majored in **CoE CS** & minored in **LSA Math** and
 * *Shanghai Jiao Tong University* majored in **UM-SJTU Joint Institute ECE**.
