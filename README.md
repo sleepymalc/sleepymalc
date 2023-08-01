@@ -31,7 +31,7 @@ A Ph.D. student at *UIUC*. I'm working on the theory of GNN and DL and designing
 
 </div>
 
-##
+## 📊 Statistic
 
 <p align="center">
   <img height="160px" src="https://github-readme-stats.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
