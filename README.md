@@ -34,7 +34,7 @@ A Ph.D. student at *UIUC*.
 ## 📊 Statistic
 
 <p align="center">
-  <img height="160px" src="https://github-readme-stats.vercel-sigma-five.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
+  <img height="160px" src="https://github-readme-stats-sigma-five.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
   <img height="160px" src="https://github-readme-stats.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
 </p>
 
