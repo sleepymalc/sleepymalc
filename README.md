@@ -1,6 +1,6 @@
 # 👋 Welcome
 
-A Ph.D. student at *UIUC*.
+A Ph.D. student at UIUC.
 
 ## 🦾 Skills
 
