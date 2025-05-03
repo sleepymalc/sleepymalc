@@ -1,6 +1,6 @@
 # 👋 Welcome
 
-A Ph.D. student at UIUC.
+A Ph.D. candidate at UIUC.
 
 <p align="center">
   <img height="160px" src="https://github-readme-stats-sigma-five.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
