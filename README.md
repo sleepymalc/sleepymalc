@@ -4,7 +4,7 @@ A Ph.D. candidate at UIUC.
 
 <p align="center">
   <img height="160px" src="https://github-readme-stats-sigma-five.vercel.app/api?username=sleepymalc&show_icons=true&count_private=true&include_all_commits=true&theme=dracula" />
-  <img height="160px" src="https://github-readme-statssleepymalc.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
+  <img height="160px" src="https://github-readme-stats-sleepymalc.vercel.app/api/wakatime?username=sleepymalc&layout=compact&langs_count=8&theme=dracula" />
 </p>
 
 <p align="center">
