@@ -1,0 +1,193 @@
+The usual solution is **not** to force every horizon to reach the same training loss or learn at the same rate. Longer horizons often have both fewer labels and higher irreducible uncertainty, so their optimal training dynamics genuinely differ.
+
+For multi-horizon forecasting, the most reliable approach is:
+
+## 1. Treat each horizon as a separate—but related—task
+
+For horizon (h), define a loss using only examples with a valid (h)-step target:
+
+[
+L_h(\theta)
+===========
+
+\frac{
+\sum_i m_{i,h},
+\ell!\left(\hat y_{i,h},y_{i,h}\right)
+}{
+\sum_i m_{i,h}
+},
+]
+
+where (m_{i,h}=1) when the target is observed.
+
+Then optimize
+
+[
+L(\theta)=\sum_{h\in\mathcal H} w_h L_h(\theta).
+]
+
+Computing a **mean separately for each horizon** matters. If you simply average over all observed labels, short horizons implicitly receive more weight because they have more observations.
+
+Also normalize the scale of each horizon’s loss. For example,
+
+[
+\widetilde L_h=\frac{L_h}{c_h},
+]
+
+where (c_h) is a fixed training-set quantity such as:
+
+* target variance at horizon (h);
+* MAE of a naïve forecast at horizon (h);
+* initial validation loss at horizon (h).
+
+A naïve-baseline normalization is often preferable because longer-horizon error naturally has a different scale.
+
+## 2. Use partial parameter sharing
+
+The statistically standard solution to unequal sample sizes is **partial pooling**:
+
+[
+z_t=f_\theta(x_{\leq t}), \qquad
+\hat y_{t,h}=g_{\phi_h}(z_t).
+]
+
+Here, (f_\theta) is a shared encoder and (g_{\phi_h}) is a small horizon-specific head. Better still, parameterize
+
+[
+\phi_h=\phi_0+\delta_h
+]
+
+and penalize
+
+[
+\sum_h \lambda_h|\delta_h|^2,
+]
+
+with stronger regularization for horizons having fewer labels.
+
+This gives you:
+
+* transfer from abundant short-horizon examples into the shared representation;
+* enough horizon-specific flexibility to model different forecast behavior;
+* much lower overfitting risk than giving each horizon a large independent model.
+
+Because horizons are ordered, an even stronger choice is a **shared horizon-conditioned decoder**:
+
+[
+\hat y_{t,h}=g_\phi(z_t,e_h),
+]
+
+where (e_h) is a low-dimensional horizon embedding. This forces nearby horizons to share statistical strength. Direct multi-horizon architectures such as MQ-RNN and TFT follow this broad idea of jointly producing multiple future predictions from shared representations. ([arXiv][1])
+
+## 3. Do not fully balance scarce horizons by oversampling
+
+Suppose horizon (h) has (n_h) examples. Two extremes are:
+
+[
+w_h=1
+\quad\text{versus}\quad
+w_h\propto n_h.
+]
+
+* (w_h=1): every horizon has equal influence, so every rare long-horizon example receives very high effective weight.
+* (w_h\propto n_h): every individual observation has roughly equal influence, so abundant short horizons dominate.
+
+A useful interpolation is
+
+[
+w_h\propto u_h n_h^\alpha,
+\qquad 0\leq\alpha\leq1,
+]
+
+where (u_h) is the deployment importance of horizon (h).
+
+* (\alpha=0): equal task weighting.
+* (\alpha=1): equal example weighting.
+* Intermediate (\alpha): compromise between task fairness and estimation variance.
+
+I would tune (\alpha) using chronological validation. Oversampling the longest horizons is reasonable for ensuring they appear in batches, but repeatedly presenting the same scarce observations does **not** add information and can make their overfitting worse.
+
+## 4. Separate representation learning from head fitting
+
+Your observation that long horizons peak earlier suggests a two-stage procedure:
+
+### Stage A: learn the shared representation
+
+Train the shared encoder using all valid examples, potentially emphasizing the abundant horizons. You can also pretrain it using:
+
+* next-step prediction;
+* masked time-series reconstruction;
+* contrastive or self-supervised objectives;
+* forecasting across many related series.
+
+### Stage B: freeze or slow down the encoder
+
+Freeze the encoder—or use a much smaller learning rate—and train the horizon-specific heads separately. Now each head can use:
+
+* its own early-stopping point;
+* its own regularization strength;
+* its own learning rate;
+* its own model capacity.
+
+This is much cleaner than attempting horizon-specific early stopping during fully joint training. If the shared encoder continues changing, a “stopped” long-horizon head may still deteriorate because its input representation is moving.
+
+A practical variant is:
+
+1. Jointly train the complete model.
+2. Restore the encoder from the best global checkpoint.
+3. Freeze it.
+4. Refit each head using horizon-specific validation and patience.
+
+## 5. Use adaptive weighting only for genuine optimization imbalance
+
+Several multi-task algorithms address different learning speeds:
+
+* **GradNorm** changes task weights to balance gradient magnitudes and relative training rates. ([Proceedings of Machine Learning Research][2])
+* **Uncertainty weighting** learns a task-dependent noise scale and downweights noisier tasks. ([CVF Open Access][3])
+* **PCGrad** modifies gradients when task gradients point in conflicting directions. ([NeurIPS Proceedings][4])
+* Pareto or multi-objective methods explicitly seek a compromise between task objectives rather than assuming a single fixed scalarization. ([NeurIPS Proceedings][5])
+
+These methods solve somewhat different problems:
+
+* Use **GradNorm** when gradient magnitudes or optimization speeds differ.
+* Use **PCGrad** when per-horizon gradients have negative cosine similarity.
+* Use **uncertainty weighting** when some targets are intrinsically much noisier.
+* Use validation-tuned static weights when the main issue is unequal sample sizes.
+
+A warning: GradNorm may deliberately increase the weight of a horizon that is learning slowly. If that horizon is slow because it has already exhausted its limited signal and is beginning to overfit, that can be exactly the wrong action. Monitor **validation improvement**, not only training rates.
+
+## What I would implement first
+
+For your forecasting example, my default setup would be
+
+[
+L
+=
+
+\sum_h
+\frac{u_hn_h^\alpha}{\sum_j u_jn_j^\alpha}
+\frac{L_h}{c_h},
+]
+
+with:
+
+* (\alpha) initially around (0.5), then validation-tuned;
+* (c_h) equal to a naïve forecast’s training error;
+* one shared encoder;
+* a shared horizon-conditioned decoder or very small per-horizon heads;
+* stronger shrinkage for low-data horizons;
+* chronological validation metrics reported separately for every horizon;
+* shared-encoder pretraining followed by frozen-encoder, per-head early stopping.
+
+For the long horizons, I would also predict a distribution or quantiles rather than only a point estimate. Direct multi-horizon probabilistic forecasting is used precisely because forecast uncertainty generally changes across the prediction horizon. ([Amazon Science][6])
+
+The central principle is:
+
+> **Use shared representations to transfer information into scarce horizons, but let regularization and validation—not training-loss equalization—determine how much each horizon should be fitted.**
+
+[1]: https://arxiv.org/abs/1711.11053?utm_source=chatgpt.com "A Multi-Horizon Quantile Recurrent Forecaster"
+[2]: https://proceedings.mlr.press/v80/chen18a/chen18a.pdf?utm_source=chatgpt.com "Gradient Normalization for Adaptive Loss Balancing in Deep ..."
+[3]: https://openaccess.thecvf.com/content_cvpr_2018/papers/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.pdf?utm_source=chatgpt.com "Multi-Task Learning Using Uncertainty to Weigh Losses for ..."
+[4]: https://proceedings.neurips.cc/paper/2020/hash/3fe78a8acf5fda99de95303940a2420c-Abstract.html?utm_source=chatgpt.com "Gradient Surgery for Multi-Task Learning"
+[5]: https://papers.nips.cc/paper_files/paper/2018/hash/432aca3a1e345e339f35a30c8f65edce-Abstract.html?utm_source=chatgpt.com "Multi-Task Learning as Multi-Objective Optimization"
+[6]: https://www.amazon.science/publications/a-multi-horizon-quantile-recurrent-forecaster?utm_source=chatgpt.com "A multi-horizon quantile recurrent forecaster - Amazon Science"
