@@ -1,193 +1,239 @@
-The usual solution is **not** to force every horizon to reach the same training loss or learn at the same rate. Longer horizons often have both fewer labels and higher irreducible uncertainty, so their optimal training dynamics genuinely differ.
+Yes. Recent work suggests several **simpler alternatives to elaborate gradient surgery**. For your specific failure mode—long horizons peak early and then overfit—I would try them in roughly this order.
 
-For multi-horizon forecasting, the most reliable approach is:
+## 1. Select a different checkpoint for each horizon
 
-## 1. Treat each horizon as a separate—but related—task
+This is probably the simplest direct solution.
 
-For horizon (h), define a loss using only examples with a valid (h)-step target:
+Save a checkpoint every epoch and compute validation loss separately:
 
 [
-L_h(\theta)
+e_h^\star=\arg\min_e L_h^{\mathrm{val}}(\theta_e).
+]
+
+At inference, produce horizon (h) using checkpoint (\theta_{e_h^\star}).
+
+You do not necessarily need one checkpoint per step. Group nearby horizons:
+
+[
+{1,\ldots,5},\quad {6,\ldots,20},\quad {21,\ldots,60},
+]
+
+and select one checkpoint per group. This gives each horizon range its own effective early-stopping time without changing training.
+
+The drawback is inference cost and possible discontinuities between horizons. Usually, using three to five horizon groups or averaging the best few checkpoints is enough.
+
+## 2. Stop updating tasks that have saturated
+
+Instead of changing loss weights continuously, simply stop or reduce updates for a horizon once its validation loss has stopped improving.
+
+For example,
+
+[
+w_h(e)=
+\begin{cases}
+1, & \text{while horizon (h) is improving},\
+\rho, & \text{after patience is exhausted},
+\end{cases}
+\qquad \rho\in{0,0.05,0.1}.
+]
+
+This resembles **task dropping**: recent multi-task work has found that probabilistically omitting tasks based on sample count, training progress, or stagnation can reduce negative transfer. ([OpenReview][1])
+
+There is one important subtlety: freezing only the long-horizon head is insufficient if the shared encoder keeps changing. The robust version is:
+
+1. Train everything jointly for a warm-up period.
+2. Freeze or greatly slow the shared encoder.
+3. Continue training each head with independent early stopping.
+
+## 3. Random horizon dropout
+
+On each minibatch, calculate the loss for only a random subset of valid horizons:
+
+[
+L_{\mathcal S}
+==============
+
+\frac{1}{|\mathcal S|}
+\sum_{h\in\mathcal S}\widetilde L_h .
+]
+
+A particularly natural forecasting version is to sample a maximum horizon (H_b) and train only on a prefix:
+
+[
+\mathcal S_b={1,\ldots,H_b}.
+]
+
+This reduces the number of repeated updates seen by scarce targets and acts like structured task dropout. You can make long horizons less frequent:
+
+[
+P(h\text{ is active})\propto n_h^\alpha,
+\qquad 0<\alpha<1.
+]
+
+This is not unbiased optimization of the original equally weighted objective—and that is intentional: it is regularization against repeatedly fitting scarce labels.
+
+A related strategy is a **short-to-long curriculum**: first learn short horizons, then progressively expose the model to longer horizons. Recent forecasting research continues to explore horizon and temporal curricula, although the evidence is less universal than for ordinary regularization or model-size reduction. ([arXiv][2])
+
+## 4. Weight by excess loss, not raw loss
+
+A common failure of adaptive weighting is that the longest horizon always has the largest loss, so it receives the largest weight—even when that loss reflects irreducible noise rather than undertraining.
+
+Instead, measure progress relative to a horizon-specific reference:
+
+[
+r_h(\theta)
 ===========
 
-\frac{
-\sum_i m_{i,h},
-\ell!\left(\hat y_{i,h},y_{i,h}\right)
-}{
-\sum_i m_{i,h}
-},
+\frac{L_h(\theta)-b_h}
+{L_h(\theta_0)-b_h+\epsilon},
 ]
 
-where (m_{i,h}=1) when the target is observed.
+where (b_h) might be:
 
-Then optimize
+* a naïve forecast’s loss;
+* a small single-horizon model’s loss;
+* an estimated noise floor.
+
+Then base adaptive weights on (r_h), not (L_h):
 
 [
-L(\theta)=\sum_{h\in\mathcal H} w_h L_h(\theta).
+w_h=
+\frac{\exp(r_h/T)}
+{\sum_j\exp(r_j/T)}.
 ]
 
-Computing a **mean separately for each horizon** matters. If you simply average over all observed labels, short horizons implicitly receive more weight because they have more observations.
+This is closely related to **ExcessMTL**, which was motivated by the observation that raw-loss adaptive weighting can assign excessive weight to noisy tasks with high irreducible error. It instead weights tasks according to their estimated distance from convergence. ([Proceedings of Machine Learning Research][3])
 
-Also normalize the scale of each horizon’s loss. For example,
+For your problem, this is more appropriate than GradNorm when long horizons are noisy rather than merely slow.
 
-[
-\widetilde L_h=\frac{L_h}{c_h},
-]
+## 5. Constrain horizon errors instead of equalizing training speed
 
-where (c_h) is a fixed training-set quantity such as:
-
-* target variance at horizon (h);
-* MAE of a naïve forecast at horizon (h);
-* initial validation loss at horizon (h).
-
-A naïve-baseline normalization is often preferable because longer-horizon error naturally has a different scale.
-
-## 2. Use partial parameter sharing
-
-The statistically standard solution to unequal sample sizes is **partial pooling**:
-
-[
-z_t=f_\theta(x_{\leq t}), \qquad
-\hat y_{t,h}=g_{\phi_h}(z_t).
-]
-
-Here, (f_\theta) is a shared encoder and (g_{\phi_h}) is a small horizon-specific head. Better still, parameterize
-
-[
-\phi_h=\phi_0+\delta_h
-]
-
-and penalize
-
-[
-\sum_h \lambda_h|\delta_h|^2,
-]
-
-with stronger regularization for horizons having fewer labels.
-
-This gives you:
-
-* transfer from abundant short-horizon examples into the shared representation;
-* enough horizon-specific flexibility to model different forecast behavior;
-* much lower overfitting risk than giving each horizon a large independent model.
-
-Because horizons are ordered, an even stronger choice is a **shared horizon-conditioned decoder**:
-
-[
-\hat y_{t,h}=g_\phi(z_t,e_h),
-]
-
-where (e_h) is a low-dimensional horizon embedding. This forces nearby horizons to share statistical strength. Direct multi-horizon architectures such as MQ-RNN and TFT follow this broad idea of jointly producing multiple future predictions from shared representations. ([arXiv][1])
-
-## 3. Do not fully balance scarce horizons by oversampling
-
-Suppose horizon (h) has (n_h) examples. Two extremes are:
-
-[
-w_h=1
-\quad\text{versus}\quad
-w_h\propto n_h.
-]
-
-* (w_h=1): every horizon has equal influence, so every rare long-horizon example receives very high effective weight.
-* (w_h\propto n_h): every individual observation has roughly equal influence, so abundant short horizons dominate.
-
-A useful interpolation is
-
-[
-w_h\propto u_h n_h^\alpha,
-\qquad 0\leq\alpha\leq1,
-]
-
-where (u_h) is the deployment importance of horizon (h).
-
-* (\alpha=0): equal task weighting.
-* (\alpha=1): equal example weighting.
-* Intermediate (\alpha): compromise between task fairness and estimation variance.
-
-I would tune (\alpha) using chronological validation. Oversampling the longest horizons is reasonable for ensuring they appear in batches, but repeatedly presenting the same scarce observations does **not** add information and can make their overfitting worse.
-
-## 4. Separate representation learning from head fitting
-
-Your observation that long horizons peak earlier suggests a two-stage procedure:
-
-### Stage A: learn the shared representation
-
-Train the shared encoder using all valid examples, potentially emphasizing the abundant horizons. You can also pretrain it using:
-
-* next-step prediction;
-* masked time-series reconstruction;
-* contrastive or self-supervised objectives;
-* forecasting across many related series.
-
-### Stage B: freeze or slow down the encoder
-
-Freeze the encoder—or use a much smaller learning rate—and train the horizon-specific heads separately. Now each head can use:
-
-* its own early-stopping point;
-* its own regularization strength;
-* its own learning rate;
-* its own model capacity.
-
-This is much cleaner than attempting horizon-specific early stopping during fully joint training. If the shared encoder continues changing, a “stopped” long-horizon head may still deteriorate because its input representation is moving.
-
-A practical variant is:
-
-1. Jointly train the complete model.
-2. Restore the encoder from the best global checkpoint.
-3. Freeze it.
-4. Refit each head using horizon-specific validation and patience.
-
-## 5. Use adaptive weighting only for genuine optimization imbalance
-
-Several multi-task algorithms address different learning speeds:
-
-* **GradNorm** changes task weights to balance gradient magnitudes and relative training rates. ([Proceedings of Machine Learning Research][2])
-* **Uncertainty weighting** learns a task-dependent noise scale and downweights noisier tasks. ([CVF Open Access][3])
-* **PCGrad** modifies gradients when task gradients point in conflicting directions. ([NeurIPS Proceedings][4])
-* Pareto or multi-objective methods explicitly seek a compromise between task objectives rather than assuming a single fixed scalarization. ([NeurIPS Proceedings][5])
-
-These methods solve somewhat different problems:
-
-* Use **GradNorm** when gradient magnitudes or optimization speeds differ.
-* Use **PCGrad** when per-horizon gradients have negative cosine similarity.
-* Use **uncertainty weighting** when some targets are intrinsically much noisier.
-* Use validation-tuned static weights when the main issue is unequal sample sizes.
-
-A warning: GradNorm may deliberately increase the weight of a horizon that is learning slowly. If that horizon is slow because it has already exhausted its limited signal and is beginning to overfit, that can be exactly the wrong action. Monitor **validation improvement**, not only training rates.
-
-## What I would implement first
-
-For your forecasting example, my default setup would be
+Another approach is to minimize average loss while placing a soft cap on normalized error at each horizon:
 
 [
 L
 =
 
+\sum_h w_h\widetilde L_h
++
+\lambda
 \sum_h
-\frac{u_hn_h^\alpha}{\sum_j u_jn_j^\alpha}
-\frac{L_h}{c_h},
+\left[
+\widetilde L_h-\tau_h
+\right]_+^2.
+]
+
+Here, (\tau_h) is an acceptable error threshold, perhaps expressed relative to a naïve forecast.
+
+ICML 2024’s **Loss Shaping Constraints** showed that minimizing average forecast-window error can produce very uneven error across prediction steps, and proposed per-step constraints to control that distribution while retaining competitive average performance. ([Proceedings of Machine Learning Research][4])
+
+This is especially useful when you care about a service-level requirement such as:
+
+> No horizon should be more than 10% worse than its baseline.
+
+It is less useful when the long-horizon target genuinely contains almost no predictable information; an unrealistic constraint will simply make the model chase noise.
+
+## 6. Make the long-horizon component much smaller
+
+Recent long-term forecasting results provide strong evidence that **low-capacity models are surprisingly competitive**, especially in small-sample settings.
+
+SparseTSF uses fewer than 1,000 parameters and reports competitive or superior long-term forecasting performance, emphasizing generalization under small-sample and low-quality-data conditions. ([Proceedings of Machine Learning Research][5])
+
+A practical architecture is therefore
+
+[
+\hat y_{t,h}
+============
+
+g_h!\left(z_t\right),
+\qquad
+z_t=f_\theta(x_{\le t}),
+]
+
+where (f_\theta) may be moderately expressive, but (g_h) is only linear or very shallow:
+
+[
+g_h(z)=a_h^\top z+b_h.
+]
+
+For scarce horizons, you can additionally force neighboring coefficients to be similar:
+
+[
+\lambda
+\sum_{h=2}^H
+|a_h-a_{h-1}|^2.
+]
+
+This horizon-smoothness penalty is extremely simple and directly pools information across adjacent horizons.
+
+## 7. Freeze a pretrained time-series encoder
+
+When labels are scarce, recent time-series foundation-model research suggests freezing most of a pretrained representation and learning only a small forecast head.
+
+MOMENT explicitly evaluates linear probing for forecasting by freezing the pretrained model and training the forecasting head, including limited-supervision settings. ([arXiv][6]) Tiny Time Mixers similarly targets efficient zero- and few-shot forecasting using compact pretrained models starting around one million parameters. ([OpenReview][7])
+
+This changes the effective number of parameters trained on the rare long-horizon labels from millions to perhaps only thousands:
+
+[
+\min_{\phi}
+\sum_h L_h\big(g_\phi(f_{\text{frozen}}(x)),y_h\big).
+]
+
+For genuinely scarce data, this can matter more than sophisticated loss weighting.
+
+## 8. Do not dismiss plain weighted sums
+
+Recent multi-task studies have repeatedly found that complicated gradient-manipulation algorithms do not always outperform a well-tuned weighted sum with ordinary regularization. One study found unitary scalarization competitive when combined with standard stabilization and regularization; random loss weighting has also been found surprisingly competitive with designed weighting algorithms. ([NeurIPS Papers][8])
+
+Therefore, a strong baseline is simply
+
+[
+L=\sum_h w_h\widetilde L_h
 ]
 
 with:
 
-* (\alpha) initially around (0.5), then validation-tuned;
-* (c_h) equal to a naïve forecast’s training error;
-* one shared encoder;
-* a shared horizon-conditioned decoder or very small per-horizon heads;
-* stronger shrinkage for low-data horizons;
-* chronological validation metrics reported separately for every horizon;
-* shared-encoder pretraining followed by frozen-encoder, per-head early stopping.
+* normalized horizon losses;
+* weight decay;
+* dropout;
+* a small decoder;
+* checkpoint averaging;
+* chronological validation.
 
-For the long horizons, I would also predict a distribution or quantiles rather than only a point estimate. Direct multi-horizon probabilistic forecasting is used precisely because forecast uncertainty generally changes across the prediction horizon. ([Amazon Science][6])
+I would only add something like FAMO if diagnostics show genuine under-optimization rather than validation overfitting. FAMO efficiently balances task-loss decreases, but a method that emphasizes slowly improving tasks can be counterproductive when those tasks are slow because their labels are noisy or scarce. ([OpenReview][9])
 
-The central principle is:
+## My recommended minimal experiment
 
-> **Use shared representations to transfer information into scarce horizons, but let regularization and validation—not training-loss equalization—determine how much each horizon should be fitted.**
+I would compare these four configurations:
 
-[1]: https://arxiv.org/abs/1711.11053?utm_source=chatgpt.com "A Multi-Horizon Quantile Recurrent Forecaster"
-[2]: https://proceedings.mlr.press/v80/chen18a/chen18a.pdf?utm_source=chatgpt.com "Gradient Normalization for Adaptive Loss Balancing in Deep ..."
-[3]: https://openaccess.thecvf.com/content_cvpr_2018/papers/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.pdf?utm_source=chatgpt.com "Multi-Task Learning Using Uncertainty to Weigh Losses for ..."
-[4]: https://proceedings.neurips.cc/paper/2020/hash/3fe78a8acf5fda99de95303940a2420c-Abstract.html?utm_source=chatgpt.com "Gradient Surgery for Multi-Task Learning"
-[5]: https://papers.nips.cc/paper_files/paper/2018/hash/432aca3a1e345e339f35a30c8f65edce-Abstract.html?utm_source=chatgpt.com "Multi-Task Learning as Multi-Objective Optimization"
-[6]: https://www.amazon.science/publications/a-multi-horizon-quantile-recurrent-forecaster?utm_source=chatgpt.com "A multi-horizon quantile recurrent forecaster - Amazon Science"
+1. **Baseline:** normalized equal-weight losses.
+2. **Checkpoint stitching:** select one checkpoint for short, medium, and long horizons.
+3. **Horizon dropout:** sample a maximum trained horizon per batch.
+4. **Frozen encoder:** joint warm-up, freeze encoder, then train small heads with independent stopping.
+
+The third configuration could use:
+
+[
+H_b\sim P(H_b=k)\propto n_k^{1/2},
+]
+
+and
+
+[
+L_b=
+\frac{1}{H_b}
+\sum_{h=1}^{H_b}
+\frac{L_h}{c_h}.
+]
+
+Among all the options, **checkpoint stitching plus a small or frozen horizon head** most directly addresses the behavior you described. Adaptive multi-objective optimization is more relevant when tasks fail to train; your problem sounds primarily like tasks train successfully but reach their best generalization points at different times.
+
+[1]: https://openreview.net/forum?id=myjAVQrRxS&utm_source=chatgpt.com "Dropped Scheduled Task: Mitigating Negative Transfer in Multi-task Learning using Dynamic Task Dropping | OpenReview"
+[2]: https://arxiv.org/abs/2406.12709?utm_source=chatgpt.com "Enhancing Spatio-temporal Quantile Forecasting with Curriculum Learning: Lessons Learned"
+[3]: https://proceedings.mlr.press/v235/he24n.html "Robust Multi-Task Learning with Excess Risks"
+[4]: https://proceedings.mlr.press/v235/hounie24a.html "Loss Shaping Constraints for Long-Term Time Series Forecasting"
+[5]: https://proceedings.mlr.press/v235/lin24n.html?utm_source=chatgpt.com "SparseTSF: Modeling Long-term Time Series Forecasting with ..."
+[6]: https://arxiv.org/html/2402.03885v2 "MOMENT: A Family of Open Time-series Foundation Models"
+[7]: https://openreview.net/forum?id=3O5YCEWETq&utm_source=chatgpt.com "Tiny Time Mixers (TTMs): Fast Pre-trained Models for ..."
+[8]: https://papers.neurips.cc/paper_files/paper/2022/file/4f301ae934f396086bfefd1139039dbd-Paper-Conference.pdf?utm_source=chatgpt.com "In Defense of the Unitary Scalarization for Deep Multi-Task ..."
+[9]: https://openreview.net/forum?id=zMeemcUeXL&noteId=cPPjCCD9do&utm_source=chatgpt.com "FAMO: Fast Adaptive Multitask Optimization | OpenReview"
